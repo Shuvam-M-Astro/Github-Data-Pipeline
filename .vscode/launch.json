@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Dagster Dev",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "dagster",
+            "args": [
+                "dev",
+            ],
+            "subProcess": true,
+            // uncomment next line, if you need to debug dagster more deeply
+            // "justMyCode": false
+            "serverReadyAction":{
+                "pattern": "Serving dagster-webserver on http://127.0.0.1:(\\d+)",
+                "uriFormat": "http://localhost:%s",
+                "action": "openExternally",
+            },
+        },
+    ]
+}
